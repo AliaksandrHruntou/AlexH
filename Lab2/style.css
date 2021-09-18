@@ -1,0 +1,111 @@
+
+body {
+    margin: auto;
+}
+
+table {
+    margin: auto;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td {
+    width: 20%;
+    padding: 5%;
+}
+
+.background {
+    padding: 1px;
+    opacity: 0.8;
+    background-image: url(resources/New_york.jpg);
+    background-origin: content-box;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+p {
+    color: white;
+}
+
+.column {
+    width: 90%;
+    column-width: 5%;
+    -webkit-column-width: 5%;
+    column-count: 2;
+    -webkit-column-count: 2;
+    column-gap: 50px;
+    -webkit-column-gap: 30px;
+    column-rule: 7px solid rgb(183, 190, 196); 
+    -webkit-column-rule: 1px solid rgb(183, 190, 196);
+    text-align: justify;
+    white-space: pre-wrap;
+    padding: 5%;
+    text-shadow: rgb(31, 26, 26) 0 0 10px;
+    color: rgb(255, 255, 255);
+    font: bold 14px Arial, sans-serif;
+    
+}
+
+.text_1 {
+    font: bold 14px Arial, sans-serif;
+    margin: 0px 0px 20px 0px;
+    padding-top: 0px;
+}
+
+.text_2 {
+    color: yellow;
+    font: italic 14px Times, sans-serif;
+}
+
+.text_3 {
+    color: rgb(84, 204, 60);
+    font: 14px Courier, sans-serif;
+}
+
+div.pictures img {
+width: 220px;
+height: 140px;
+object-fit: cover;
+}
+
+div.motion_picture img {
+    width: 340px;
+    height: 420px;
+}
+
+#first-img {
+    position: absolute;
+    right: 200px;
+    bottom: 300px;
+}
+
+#second-img {
+    opacity: 0.8;
+    position: absolute;
+    right: 280px;
+    bottom: 380px;
+}
+
+#third-img {
+    opacity: 0.6;
+    position: absolute;
+    right: 360px;
+    bottom: 460px;
+}
+
+@keyframes statue {
+    0%   { left:0px; top:0px;}
+    50%  { left:500px; top:250px;}
+    100% { left:960px; top:200px;}
+    from {transform:rotate(60deg); opacity: 50%}
+    to {transform:rotate(180deg); opacity: 75%;filter: grayscale(50%); }
+    to {transform:rotate(360deg); opacity: 100%;filter: grayscale(70%); }
+}
+
+.motion_picture {
+    z-index: 7;
+    position: absolute;
+    animation-name: statue;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+}
